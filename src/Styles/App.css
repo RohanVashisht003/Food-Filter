@@ -1,5 +1,7 @@
+
 .App {
   text-align: center;
+  min-width: 350px;
 }
 
 .App-logo {
@@ -26,6 +28,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.recipe-main-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* padding: 54px 86px; */
+  align-items: center;
+  margin-top: 90px;
 }
 
 @keyframes App-logo-spin {

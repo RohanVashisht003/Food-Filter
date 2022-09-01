@@ -1,0 +1,46 @@
+.dropdown-menu{
+    margin: auto 4px;
+    background-color: rgb(169, 219, 219);
+    box-shadow: inset 0px 0px 3px black;
+}
+
+.filterBox{
+    margin-top: 2px;
+    
+}
+
+.commonDiv{
+    /* border: 1px solid black; */
+    width: 32%;
+    height:200px;
+    padding:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.filteringCard{
+    height: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+
+.commonInnerDiv{
+    height: 90%;
+    width: 99%;
+    /* border: 1px solid black; */
+    display:flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    padding: 0px 10px;
+}
