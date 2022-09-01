@@ -1,0 +1,54 @@
+.mainOuterDiv{
+    margin: 33px auto;
+    width: 80%;
+    min-width: 400px;
+    height:80%;
+    min-height: 476px;
+    background-color: rgba(128, 128, 128, 0.189);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius:20px
+}
+
+.firstDiv{
+    margin-top: 20px;
+    padding: 5px;
+    display: flex;
+    height:300px;
+    justify-content: space-between;
+}
+
+.imgCard{
+    width: 55% !important;
+}
+.imgCard img{
+    height: 100%;
+}
+
+.infoCard{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ingreDiv{
+    height: 100%;
+    width: 90%;
+    overflow: scroll;
+    margin: 2px;
+}
+.ingreDiv::-webkit-scrollbar {
+    display: none;
+  }
+
+  .secondDiv{
+    width: 100%;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    flex-direction: row;
+  }

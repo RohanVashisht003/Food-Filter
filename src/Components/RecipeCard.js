@@ -12,30 +12,39 @@ import Button from 'react-bootstrap/Button';
 
 
 function RecipeCard(props) {
+  
   const APP_ID = '5d82d324';
   const APP_KEY = '44b03456762ae6dbaff4473245e8c536';
   
+  // state for search bar
   const [search, setSearch] = useState('');
+  // state for query keyword
   const [query, setQuery] = useState('Chole');
+  // state for to and from in calories
   const [from,setFrom] = useState(0);
   const [to,setTo] = useState(0);
+  // state for checkbox in diet
   const[checkArr,setcheckArr] = useState([]);
+  // state for 
   const [upto,setUpto] = useState([]);
  
   useEffect(()=>{
     getRecipes();
   },[query]);
 
+  // after filtering result
   useEffect(()=>{
 
   },[checkArr]);
 
+  // function for filtering array after button press
 const filteredArr = async()=>{
   let calVal = `${from}-${to}`;
   let ingrVal = `${upto}`;
   
   let strDiet = checkArr.join('&diet=');
   let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+
   if((from>0&&to>0)||(from==0&&to>0)){
     url =url.concat('&calories=',calVal);
     console.log(url);
@@ -55,7 +64,7 @@ const filteredArr = async()=>{
     console.log(err,'error');
   })
 }
-
+// for checkbox
 const setNewArr = (e)=>{
   let isChecked = e.target.checked;
   if(isChecked){
@@ -67,7 +76,7 @@ const setNewArr = (e)=>{
   }
 }
 
-
+// for fetching recipes on start
   const getRecipes = async()=>{
     await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`).then(response=>response.json()).then((data)=>{
       const recipeFound = data.hits;
@@ -77,9 +86,11 @@ const setNewArr = (e)=>{
     })
   };
 
+  // for updating search
   const updateSearch = (e)=>{
     setSearch(e.target.value);
   };
+  
   const getSearch = (e)=>{
     e.preventDefault();
     setQuery(search);
@@ -166,7 +177,7 @@ const setNewArr = (e)=>{
             </Form>
            </div>
           </section>
-          <section className='ingreDiv commonDiv'>
+          <section className='ingrDiv commonDiv'>
           <h6>Ingredients</h6>
           <div className='commonInnerDiv'>
             <Form>
@@ -181,7 +192,10 @@ const setNewArr = (e)=>{
            </div>
           </section>
           </div>
-          <Button onClick={filteredArr}>Submit</Button>
+          <div className='buttonContainer'>
+          <Button onClick={filteredArr}>Filter</Button>
+          </div>
+          
         </DropdownButton>
         </div>
        

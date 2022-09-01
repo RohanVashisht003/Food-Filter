@@ -44,3 +44,13 @@
 form{
     padding: 0px 10px;
 }
+
+.buttonContainer{
+    display: flex;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.buttonContainer button{
+    margin: 17px;
+}

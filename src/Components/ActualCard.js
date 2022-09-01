@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function ActualCard(props) {
   const{recipeData} = props;
+  // fetching uri
   let uri= recipeData.uri.slice(51);
   return (
     <Card className='cardStyle'>
@@ -20,6 +21,7 @@ function ActualCard(props) {
         <div className='buttonsDiv'>
         <p className="badge bg-secondary text-wrap text-capitalize">{recipeData.cuisineType}</p>
         
+        {/* passing uri to button and page*/}
         <Nav.Link as={Link} to={`/moreInfo/${uri}`}>
         More Info &gt;
         </Nav.Link>
