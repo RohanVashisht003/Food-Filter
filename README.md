@@ -1,3 +1,16 @@
+## Screenshots
+
+### Search Page
+1. 
+![Semantic description of image](https://gitlab.com/rnmm003/images/-/raw/main/Screenshot_2022-09-02_000046.jpg)
+
+2.
+   ![Semantic description of image](https://gitlab.com/rnmm003/images/-/raw/main/Screenshot_2022-09-02_001430.jpg) 
+
+### MoreInfo Page
+3.
+  ![Semantic description of image](https://gitlab.com/rnmm003/images/-/raw/main/Screenshot_2022-09-02_001617.jpg) 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
